@@ -15,16 +15,25 @@
     text-decoration: none;
     font-family: "roboto";
 }
-.navLeft{
+.sidebar{
     width: 60px;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.lienLeft img{
+.sidebar img{
     width: 60px;
     height: 60px;
     margin-left: 10px;
-   
+    margin-bottom: 10px;
+}
+.App{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    left: 20%;
+    top: 30%;
 }
