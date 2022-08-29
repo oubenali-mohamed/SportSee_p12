@@ -10,6 +10,8 @@ const StyleSidebar = styled.div`
   background-color: #000000;
   position: absolute;
   width: 80px;
+  top: 0;
+  margin-top: 85px;
 `
 function Sidebar() {
   return (
