@@ -13,7 +13,7 @@ root.render(
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profil/:id" element={<Profil />} />
+        {<Route path="/profil/:id" element={<Profil />} />}
         <Route path="/reglage" element={<Profil />} />
         <Route path="/communaute" element={<Profil />} />
         <Route path="*" element={<Error />} />
