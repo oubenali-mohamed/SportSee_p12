@@ -37,3 +37,7 @@
   left: 20%;
   top: 30%;
 }
+.recharts-legend-wrapper {
+  margin-left: 200px;
+  margin-top: -30px;
+}

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import glucides from '../../assets/glucides.png'
-
+import './Glucides.css'
 let urlUser = 'http://localhost:3000/user/'
 let userGlucides = ''
 
@@ -14,23 +14,12 @@ function Glucides() {
       userGlucides = data.data.keyData.carbohydrateCount
     })
   return (
-    <div
-      style={{
-        position: 'absolute',
-        marginLeft: '1100px',
-        marginTop: '400px',
-        display: 'flex',
-        flexDirection: 'row',
-      }}
-    >
+    <div className="containerGlucides">
       <div>
-        <img src={glucides} alt="glucides" width="80px" />
+        <img className="imgGlucides" src={glucides} alt="glucides" />
       </div>
-      <div
-        style={{ marginTop: '15px', fontWeight: 'bold', marginLeft: '30px' }}
-      >
-        {userGlucides}
-        <p>glucides</p>
+      <div className="numberGlucides">
+        {userGlucides}g<p>glucides</p>
       </div>
     </div>
   )

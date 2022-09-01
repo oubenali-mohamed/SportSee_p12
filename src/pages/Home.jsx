@@ -22,10 +22,10 @@ function Home() {
     <div>
       <div className="App">
         <StyleButton>
-          <StyleLienUser to="/profil/12"> Utilisateur 1</StyleLienUser>
+          <StyleLienUser to="/profil/12"> User 1</StyleLienUser>
         </StyleButton>
         <StyleButton>
-          <StyleLienUser to="/profil/18"> Utilisateur 2</StyleLienUser>
+          <StyleLienUser to="/profil/18"> User 2</StyleLienUser>
         </StyleButton>
       </div>
       <div>

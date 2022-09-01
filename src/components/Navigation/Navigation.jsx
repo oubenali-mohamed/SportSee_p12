@@ -19,16 +19,16 @@ function Navigation() {
 
       <nav className="navigation">
         <Link className="lien" to="/">
-          Accueil{' '}
+          Accueil
         </Link>
-        <Link className="lien" to="/profil/:id">
-          Profil{' '}
+        <Link className="lien" to="/">
+          Profil
         </Link>
-        <Link className="lien" to="/reglage">
-          Réglage{' '}
+        <Link className="lien" to="/">
+          Réglage
         </Link>
-        <Link className="lien" to="/communaute">
-          Communauté{' '}
+        <Link className="lien" to="/">
+          Communauté
         </Link>
       </nav>
     </StyleNavigation>

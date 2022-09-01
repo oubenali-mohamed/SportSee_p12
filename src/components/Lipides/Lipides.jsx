@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import lipides from '../../assets/lipides.png'
-
+import './Lipides.css'
 let urlUser = 'http://localhost:3000/user/'
 let userLipides = ''
 
@@ -14,23 +14,12 @@ function Lipides() {
       userLipides = data.data.keyData.lipidCount
     })
   return (
-    <div
-      style={{
-        position: 'absolute',
-        marginLeft: '1100px',
-        marginTop: '500px',
-        display: 'flex',
-        flexDirection: 'row',
-      }}
-    >
+    <div className="containerLipides">
       <div>
-        <img src={lipides} alt="lipides" width="80px" />
+        <img className="imgLipides" src={lipides} alt="lipides" />
       </div>
-      <div
-        style={{ marginTop: '15px', fontWeight: 'bold', marginLeft: '30px' }}
-      >
-        {userLipides}
-        <p>lipides</p>
+      <div className="numberLipides">
+        {userLipides}g<p>lipides</p>
       </div>
     </div>
   )

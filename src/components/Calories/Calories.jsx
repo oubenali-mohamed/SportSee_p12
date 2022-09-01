@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import calories from '../../assets/calories.png'
+import './Calories.css'
 
 let urlUser = 'http://localhost:3000/user/'
 let userCalories = ''
@@ -14,22 +15,12 @@ function Calories() {
       userCalories = data.data.keyData.calorieCount
     })
   return (
-    <div
-      style={{
-        position: 'absolute',
-        marginLeft: '1100px',
-        marginTop: '200px',
-        display: 'flex',
-        flexDirection: 'row',
-      }}
-    >
+    <div className="containerCalories">
       <div>
-        <img src={calories} alt="calories" width="80px" />
+        <img className="imgCalories" src={calories} alt="calories" />
       </div>
-      <div
-        style={{ marginTop: '15px', fontWeight: 'bold', marginLeft: '30px' }}
-      >
-        {userCalories}
+      <div className="numberCalories">
+        {userCalories}kcal
         <p>calories</p>
       </div>
     </div>

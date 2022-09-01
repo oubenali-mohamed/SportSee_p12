@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import proteines from '../../assets/proteines.png'
-
+import './Proteines.css'
 let urlUser = 'http://localhost:3000/user/'
 let userProteines = ''
 
@@ -14,23 +14,12 @@ function Proteines() {
       userProteines = data.data.keyData.proteinCount
     })
   return (
-    <div
-      style={{
-        position: 'absolute',
-        marginLeft: '1100px',
-        marginTop: '300px',
-        display: 'flex',
-        flexDirection: 'row',
-      }}
-    >
+    <div className="containerProteines">
       <div>
-        <img src={proteines} alt="proteines" width="80px" />
+        <img className="imgProteines" src={proteines} alt="proteines" />
       </div>
-      <div
-        style={{ marginTop: '15px', fontWeight: 'bold', marginLeft: '30px' }}
-      >
-        {userProteines}
-        <p>proteines</p>
+      <div className="numberProteines">
+        {userProteines}g<p>proteines</p>
       </div>
     </div>
   )

@@ -31,15 +31,21 @@ function Activity() {
         left: 150,
         bottom: 5,
       }}
+      barSize={15}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis />
       <YAxis yAxisId="right" orientation="right" stroke="#000000" />
-      <YAxis />
+      <YAxis hide={true} />
       <Tooltip />
-      <Legend />
-      <Bar dataKey="calories" barSize={15} fill="#E60001" />
-      <Bar yAxisId="right" dataKey="kilogram" barSize={15} fill="#000000" />
+      <Legend
+        verticalAlign="middle"
+        align="center"
+        iconType={'circle'}
+        iconSize={10}
+      />
+      <Bar dataKey="calories" fill="#E60001" />
+      <Bar yAxisId="right" dataKey="kilogram" fill="#000000" />
     </BarChart>
   )
 }
