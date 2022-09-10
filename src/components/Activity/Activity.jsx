@@ -7,24 +7,15 @@ import {
   Legend,
   Tooltip,
 } from 'recharts'
-import { useParams } from 'react-router-dom'
-let urlActivity = 'http://localhost:3000/user/'
-let dataActivity = ''
 
-function Activity() {
-  const { id } = useParams()
-  fetch(urlActivity + id + '/activity')
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      dataActivity = data.data.sessions
-    })
+import '../../utils/styles/styles.css'
+
+function Activity({ activity }) {
   return (
     <BarChart
       width={1000}
       height={500}
-      data={dataActivity}
+      data={activity}
       margin={{
         top: 200,
         right: 30,

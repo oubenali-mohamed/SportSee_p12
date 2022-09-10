@@ -1,31 +1,20 @@
-import { useParams } from 'react-router-dom'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
-let urlSession = 'http://localhost:3000/user/'
-let dataSessions = ''
 
-function Session() {
-  const { id } = useParams()
-  fetch(urlSession + id + '/average-sessions')
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      dataSessions = data.data.sessions
-    })
+function Session({ sessions }) {
   return (
     <LineChart
-      width={500}
+      width={400}
       height={300}
-      data={dataSessions}
+      data={sessions}
       margin={{
         top: 30,
         right: 30,
-        left: 150,
+        left: 100,
         bottom: 5,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" fill="#E60001" stroke="none" />
-      <XAxis />
+      <XAxis dataKey="day" />
       <YAxis hide={true} />
       <Line
         type="natural"

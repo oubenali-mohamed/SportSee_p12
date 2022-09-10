@@ -1,26 +1,14 @@
-import { useParams } from 'react-router-dom'
 import calories from '../../assets/calories.png'
 import './Calories.css'
 
-let urlUser = 'http://localhost:3000/user/'
-let userCalories = ''
-
-function Calories() {
-  const { id } = useParams()
-  fetch(urlUser + id)
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      userCalories = data.data.keyData.calorieCount
-    })
+function Calories({ calorieCount }) {
   return (
     <div className="containerCalories">
       <div>
         <img className="imgCalories" src={calories} alt="calories" />
       </div>
       <div className="numberCalories">
-        {userCalories}kcal
+        {(calorieCount / 1000).toFixed(3) + ' '} kCal
         <p>calories</p>
       </div>
     </div>
