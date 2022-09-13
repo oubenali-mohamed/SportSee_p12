@@ -1,5 +1,10 @@
 import glucides from '../../assets/glucides.png'
 import './Glucides.css'
+import PropTypes from 'prop-types'
+
+Glucides.propTypes = {
+  glucideCount: PropTypes.number,
+}
 
 function Glucides({ glucideCount }) {
   return (

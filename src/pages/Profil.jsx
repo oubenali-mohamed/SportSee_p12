@@ -26,6 +26,7 @@ function Profil() {
 
   useEffect(() => {
     Services.getUserData(id).then((data) => {
+      console.log(data)
       userFirstName = data.data.userInfos.firstName
       calories = data.data.keyData.calorieCount
       lipides = data.data.keyData.lipidCount
@@ -37,7 +38,6 @@ function Profil() {
       dataSessions = data.data.sessions
     })
     Services.getUserPerformance(id).then((data) => {
-      console.log(data)
       dataPerformance = data.data.data
     })
     Services.getUserActivity(id).then((data) => {

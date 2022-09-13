@@ -1,6 +1,10 @@
 import calories from '../../assets/calories.png'
 import './Calories.css'
+import PropTypes from 'prop-types'
 
+Calories.propTypes = {
+  calorieCount: PropTypes.number,
+}
 function Calories({ calorieCount }) {
   return (
     <div className="containerCalories">

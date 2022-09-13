@@ -37,7 +37,35 @@
   left: 20%;
   top: 30%;
 }
-.recharts-legend-wrapper {
-  margin-left: 200px;
-  margin-top: -30px;
+.radarChart {
+  background-color: #282d30;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.pieChart {
+  margin-left: 40px;
+}
+.recharts-default-legend {
+  position: absolute;
+  width: 80%;
+  top: 30;
+}
+.contentTooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 100px;
+  background-color: #e60001;
+  color: #ffffff;
+  font-size: 12px;
+}
+.contentTooltipSessions {
+  background-color: #ffffff;
+  color: #000000;
+  width: 60px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

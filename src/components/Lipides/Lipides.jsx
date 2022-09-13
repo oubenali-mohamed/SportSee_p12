@@ -1,6 +1,10 @@
 import lipides from '../../assets/lipides.png'
 import './Lipides.css'
+import PropTypes from 'prop-types'
 
+Lipides.propTypes = {
+  lipideCount: PropTypes.number,
+}
 function Lipides({ lipideCount }) {
   return (
     <div className="containerLipides">

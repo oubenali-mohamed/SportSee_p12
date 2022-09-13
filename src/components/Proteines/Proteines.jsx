@@ -1,6 +1,10 @@
 import proteines from '../../assets/proteines.png'
 import './Proteines.css'
+import PropTypes from 'prop-types'
 
+Proteines.propTypes = {
+  proteineCount: PropTypes.number,
+}
 function Proteines({ proteineCount }) {
   return (
     <div className="containerProteines">

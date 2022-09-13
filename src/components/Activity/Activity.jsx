@@ -7,10 +7,25 @@ import {
   Legend,
   Tooltip,
 } from 'recharts'
-
 import '../../utils/styles/styles.css'
+import PropTypes from 'prop-types'
+
+Activity.propTypes = {
+  activity: PropTypes.array,
+}
 
 function Activity({ activity }) {
+  function TooltipCustom({ active, payload }) {
+    if (active && payload && payload.length) {
+      return (
+        <div className="contentTooltip">
+          <p>{`${payload[0].value} kg`}</p>
+          <p>{`${payload[1].value} kCal`}</p>
+        </div>
+      )
+    }
+    return null
+  }
   return (
     <BarChart
       width={1000}
@@ -28,15 +43,15 @@ function Activity({ activity }) {
       <XAxis />
       <YAxis yAxisId="right" orientation="right" stroke="#000000" />
       <YAxis hide={true} />
-      <Tooltip />
+      <Tooltip content={TooltipCustom} />
       <Legend
-        verticalAlign="middle"
-        align="center"
+        verticalAlign="top"
+        align="right"
         iconType={'circle'}
         iconSize={10}
       />
-      <Bar dataKey="calories" fill="#E60001" />
       <Bar yAxisId="right" dataKey="kilogram" fill="#000000" />
+      <Bar dataKey="calories" fill="#E60001" />
     </BarChart>
   )
 }

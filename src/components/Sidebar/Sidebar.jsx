@@ -6,7 +6,7 @@ import bike from '../../assets/bike.png'
 import weight from '../../assets/weight.png'
 
 const StyleSidebar = styled.div`
-  height: 100%;
+  height: 120%;
   background-color: #000000;
   position: absolute;
   width: 80px;
