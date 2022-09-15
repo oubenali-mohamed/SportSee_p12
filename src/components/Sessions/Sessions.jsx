@@ -1,6 +1,16 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+const StyleTooltip = styled.div`
+  background-color: #ffffff;
+  color: #000000;
+  width: 60px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+`
 Session.propTypes = {
   sessions: PropTypes.array,
 }
@@ -22,12 +32,12 @@ function Session({ sessions }) {
       </svg>
     )
   }
-  function TooltipCustom({ active, payload }) {
+  function CustomTooltip({ active, payload }) {
     if (active && payload && payload.length) {
       return (
-        <div className="contentTooltipSessions">
+        <StyleTooltip>
           <span>{`${payload[0].value} min`}</span>
-        </div>
+        </StyleTooltip>
       )
     }
     return null
@@ -54,7 +64,7 @@ function Session({ sessions }) {
         dot={false}
         activeDot={<Dot />}
       />
-      <Tooltip content={TooltipCustom} />
+      <Tooltip content={CustomTooltip} />
     </LineChart>
   )
 }

@@ -9,28 +9,36 @@ const StyleNavigation = styled.div`
   background-color: #000000;
   height: 80px;
 `
-
+const StyleMenu = styled.nav`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+`
+const StyleLogo = styled.img`
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 55px;
+`
+const StyleLien = styled(Link)`
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'roboto';
+`
 function Navigation() {
   return (
     <StyleNavigation>
       <Link to="/">
-        <img className="logo" id="logo" src={logo} alt="logo SportSee" />
+        <StyleLogo id="logo" src={logo} alt="logo SportSee" />
       </Link>
 
-      <nav className="navigation">
-        <Link className="lien" to="/">
-          Accueil
-        </Link>
-        <Link className="lien" to="/">
-          Profil
-        </Link>
-        <Link className="lien" to="/">
-          Réglage
-        </Link>
-        <Link className="lien" to="/">
-          Communauté
-        </Link>
-      </nav>
+      <StyleMenu>
+        <StyleLien to="/">Accueil</StyleLien>
+        <StyleLien to="/">Profil</StyleLien>
+        <StyleLien to="/">Réglage</StyleLien>
+        <StyleLien to="/">Communauté</StyleLien>
+      </StyleMenu>
     </StyleNavigation>
   )
 }

@@ -16,18 +16,26 @@ const StyleButton = styled.button`
   border: none;
   cursor: pointer;
 `
-
+const StyleApp = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+`
 function Home() {
   return (
     <div>
-      <div className="App">
+      <StyleApp>
         <StyleButton>
           <StyleLienUser to="/profil/12"> User 1</StyleLienUser>
         </StyleButton>
         <StyleButton>
           <StyleLienUser to="/profil/18"> User 2</StyleLienUser>
         </StyleButton>
-      </div>
+      </StyleApp>
       <div>
         <Sidebar />
       </div>

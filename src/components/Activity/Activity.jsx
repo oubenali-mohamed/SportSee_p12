@@ -7,21 +7,32 @@ import {
   Legend,
   Tooltip,
 } from 'recharts'
-import '../../utils/styles/styles.css'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const StyleTooltipActivity = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 100px;
+  background-color: #e60001;
+  color: #ffffff;
+  font-size: 12px;
+`
 
 Activity.propTypes = {
   activity: PropTypes.array,
 }
 
 function Activity({ activity }) {
-  function TooltipCustom({ active, payload }) {
+  function CustomTooltip({ active, payload }) {
     if (active && payload && payload.length) {
       return (
-        <div className="contentTooltip">
+        <StyleTooltipActivity>
           <p>{`${payload[0].value} kg`}</p>
           <p>{`${payload[1].value} kCal`}</p>
-        </div>
+        </StyleTooltipActivity>
       )
     }
     return null
@@ -39,11 +50,11 @@ function Activity({ activity }) {
       }}
       barSize={15}
     >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid strokeDasharray="3 3" vertical={false} />
       <XAxis />
       <YAxis yAxisId="right" orientation="right" stroke="#000000" />
       <YAxis hide={true} />
-      <Tooltip content={TooltipCustom} />
+      <Tooltip content={CustomTooltip} />
       <Legend
         verticalAlign="top"
         align="right"
@@ -52,6 +63,9 @@ function Activity({ activity }) {
       />
       <Bar yAxisId="right" dataKey="kilogram" fill="#000000" />
       <Bar dataKey="calories" fill="#E60001" />
+      <text x="180" y="220" fontSize={16}>
+        Activité quotidienne
+      </text>
     </BarChart>
   )
 }

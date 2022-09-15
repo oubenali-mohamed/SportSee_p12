@@ -1,13 +1,17 @@
 import { PieChart, Pie } from 'recharts'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+const StylePieChart = styled(PieChart)`
+  margin-left: 40px;
+`
 Score.propTypes = {
   score: PropTypes.number,
 }
 function Score({ score }) {
   const scoreData = [{ name: 'score', value: score }]
   return (
-    <PieChart width={300} height={235} className="pieChart">
+    <StylePieChart width={300} height={235}>
       <Pie
         dataKey="value"
         data={scoreData}
@@ -22,15 +26,13 @@ function Score({ score }) {
       <text x="85" y="130" fontSize={16} fontWeight="bold">
         {score}%
       </text>
-      <text fontSize={14}>
-        <tspan x="80" y="150">
-          de votre
-        </tspan>
-        <tspan x="80" y="170">
-          objectif
-        </tspan>
+      <text x="80" y="150" fontSize={14}>
+        de votre
       </text>
-    </PieChart>
+      <text x="80" y="170" fontSize={14}>
+        objectif
+      </text>
+    </StylePieChart>
   )
 }
 

@@ -1,6 +1,12 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+const StyleRadar = styled(RadarChart)`
+  background-color: #282d30;
+  margin-top: 30px;
+  margin-left: 30px;
+`
 Performance.propTypes = {
   performances: PropTypes.array,
 }
@@ -17,7 +23,7 @@ function Performance({ performances }) {
   }
 
   return (
-    <RadarChart
+    <StyleRadar
       outerRadius={90}
       width={300}
       height={235}
@@ -33,7 +39,7 @@ function Performance({ performances }) {
       />
 
       <Radar dataKey="value" fill="#E60001" fillOpacity={0.6} />
-    </RadarChart>
+    </StyleRadar>
   )
 }
 export default Performance
