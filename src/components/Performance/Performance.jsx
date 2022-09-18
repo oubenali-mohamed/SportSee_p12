@@ -8,7 +8,12 @@ const StyleRadar = styled(RadarChart)`
   margin-left: 30px;
 `
 Performance.propTypes = {
-  performances: PropTypes.any,
+  performances: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+      kind: PropTypes.number,
+    })
+  ),
 }
 
 function Performance({ performances }) {

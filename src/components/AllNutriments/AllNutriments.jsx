@@ -15,10 +15,14 @@ const StyleContainer = styled.div`
   margin-left: -50px;
 `
 AllNutriments.propTypes = {
-  keyData: PropTypes.any,
+  keyData: PropTypes.shape({
+    calorieCount: PropTypes.number,
+    carbohydrateCount: PropTypes.number,
+    lipidCount: PropTypes.number,
+    proteinCount: PropTypes.number,
+  }),
 }
 function AllNutriments({ keyData }) {
-  console.log(keyData)
   return (
     <StyleContainer>
       <Nutriment unity="calories" image={calories}>

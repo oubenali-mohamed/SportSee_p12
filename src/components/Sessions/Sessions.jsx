@@ -12,13 +12,19 @@ const StyleTooltip = styled.div`
   justify-content: center;
 `
 Session.propTypes = {
-  sessions: PropTypes.any,
+  performances: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number,
+      sessionsLength: PropTypes.number,
+    })
+  ),
 }
-/**
- * @param {number} value
- * @return {string} corresponding at first letter of day
- */
+
 function Session({ sessions }) {
+  /**
+   * @param {number} value
+   * @return {string} corresponding at first letter of day
+   */
   function day(value) {
     if (value === 1) return 'L'
     if (value === 2) return 'M'
