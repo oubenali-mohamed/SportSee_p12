@@ -11,7 +11,6 @@ Score.propTypes = {
   score: PropTypes.any,
 }
 function Score({ score }) {
-  // const scoreData = [{ name: 'score', value: score }]
   const scoreData = [
     {
       name: 'completed',
