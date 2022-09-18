@@ -22,7 +22,7 @@ Install dependencies
 
 In your terminal run the back-end using yarn or npm command (for ex) :
 
-### npm srun dev
+### npm run dev
 
 the API is running on port 3000.
 
