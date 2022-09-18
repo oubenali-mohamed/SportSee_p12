@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const StyleRadar = styled(RadarChart)`
   background-color: #282d30;
   margin-top: 30px;
-  margin-left: 30px;
 `
 Performance.propTypes = {
   performances: PropTypes.arrayOf(

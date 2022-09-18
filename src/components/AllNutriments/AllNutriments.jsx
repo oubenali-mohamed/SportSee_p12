@@ -12,7 +12,7 @@ const StyleContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: -300px;
-  margin-left: -50px;
+  margin-left: 40px;
 `
 AllNutriments.propTypes = {
   keyData: PropTypes.shape({
