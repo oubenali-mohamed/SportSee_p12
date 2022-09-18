@@ -6,7 +6,7 @@ const StylePieChart = styled(PieChart)`
   margin-left: 40px;
 `
 Score.propTypes = {
-  score: PropTypes.number,
+  score: PropTypes.any,
 }
 function Score({ score }) {
   const scoreData = [{ name: 'score', value: score }]

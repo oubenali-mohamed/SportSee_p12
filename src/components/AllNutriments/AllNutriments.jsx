@@ -15,9 +15,10 @@ const StyleContainer = styled.div`
   margin-left: -50px;
 `
 AllNutriments.propTypes = {
-  keyData: PropTypes.object,
+  keyData: PropTypes.any,
 }
 function AllNutriments({ keyData }) {
+  console.log(keyData)
   return (
     <StyleContainer>
       <Nutriment unity="calories" image={calories}>

@@ -27,15 +27,15 @@ const StyleNutrimentUnity = styled.p`
 Nutriment.propTypes = {
   children: PropTypes.object,
   image: PropTypes.string,
-  unity: PropTypes.string,
+  unityCount: PropTypes.string,
 }
-function Nutriment({ children, image, unity }) {
+function Nutriment({ children, image, unityCount }) {
   return (
     <StyleContainer>
       <StyledImg src={image} alt="nutriment" />
       <div>
         <StyleNutriment>{children}</StyleNutriment>
-        <StyleNutrimentUnity>{unity}</StyleNutrimentUnity>
+        <StyleNutrimentUnity>{unityCount}</StyleNutrimentUnity>
       </div>
     </StyleContainer>
   )

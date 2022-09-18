@@ -30,18 +30,21 @@ function Profil() {
 
   useEffect(() => {
     Services.getUserData(id).then((data) => {
-      console.log(data)
+      // console.log(data)
       nutrimentsData = data.data.keyData
       userFirstName = data.data.userInfos.firstName
       score = data.data.score * 100
     })
     Services.getUserSession(id).then((data) => {
+      // console.log(data)
       dataSessions = data.data.sessions
     })
     Services.getUserPerformance(id).then((data) => {
+      // console.log(data)
       dataPerformance = data.data.data
     })
     Services.getUserActivity(id).then((data) => {
+      console.log(data)
       dataActivity = data.data.sessions
     })
   }, [id])

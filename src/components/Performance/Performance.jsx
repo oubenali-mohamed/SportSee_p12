@@ -8,10 +8,14 @@ const StyleRadar = styled(RadarChart)`
   margin-left: 30px;
 `
 Performance.propTypes = {
-  performances: PropTypes.array,
+  performances: PropTypes.any,
 }
 
 function Performance({ performances }) {
+  /**
+   * @param {number} value
+   * @returns {string} corresponding at performance of user
+   */
   function kind(value) {
     if (value === 1) return 'Cardio'
     if (value === 2) return 'Energy'

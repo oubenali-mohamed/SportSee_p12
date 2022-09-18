@@ -22,9 +22,12 @@ const StyleTooltipActivity = styled.div`
 `
 
 Activity.propTypes = {
-  activity: PropTypes.array,
+  activity: PropTypes.any,
 }
-
+/**
+ * @param {boolean} active
+ * @param {array} payload return array with value
+ */
 function Activity({ activity }) {
   function CustomTooltip({ active, payload }) {
     if (active && payload && payload.length) {

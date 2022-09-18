@@ -12,8 +12,12 @@ const StyleTooltip = styled.div`
   justify-content: center;
 `
 Session.propTypes = {
-  sessions: PropTypes.array,
+  sessions: PropTypes.any,
 }
+/**
+ * @param {number} value
+ * @return {string} corresponding at first letter of day
+ */
 function Session({ sessions }) {
   function day(value) {
     if (value === 1) return 'L'
