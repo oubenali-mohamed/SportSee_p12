@@ -24,7 +24,7 @@ AllNutriments.propTypes = {
 }
 function AllNutriments({ keyData }) {
   return (
-    <StyleContainer>
+    <StyleContainer id="nutriments">
       <Nutriment unity="calories" image={calories}>
         {<span>{(keyData.calorieCount / 1000).toFixed(3)} kCal</span>}
       </Nutriment>

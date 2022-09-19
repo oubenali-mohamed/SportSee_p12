@@ -48,6 +48,7 @@ function Activity({ activity }) {
   }
   return (
     <BarChart
+      id="barChart"
       width={1000}
       height={500}
       data={activity}

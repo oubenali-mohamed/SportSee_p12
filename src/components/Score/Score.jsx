@@ -22,7 +22,7 @@ function Score({ score }) {
     },
   ]
   return (
-    <StylePieChart width={200} height={235}>
+    <StylePieChart width={200} height={235} id="pieChart">
       <Pie
         dataKey="value"
         data={scoreData}

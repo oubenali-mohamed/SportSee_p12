@@ -36,7 +36,7 @@ function Performance({ performances }) {
       width={300}
       height={235}
       data={performances}
-      className="radarChart"
+      id="radar"
     >
       <PolarGrid />
       <PolarAngleAxis

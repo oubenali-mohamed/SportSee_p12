@@ -51,7 +51,7 @@ function Profil() {
         <h1>Bonjour {userFirstName}</h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </StyleHeader>
-      <div>
+      <div id="radarSessionScore">
         <Sidebar />
         <Activity activity={dataActivity} />
         <StyledDashboard>

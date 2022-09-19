@@ -2,3 +2,39 @@
   position: absolute;
   width: 80%;
 }
+@media all and (max-width: 1024px) {
+  #barChart {
+    width: 800px;
+    height: auto;
+  }
+  .recharts-legend-wrapper {
+    margin-top: -30px;
+  }
+  .recharts-default-legend {
+    width: 60%;
+  }
+  #radarSessionScore {
+    width: 800px;
+  }
+  #lineChart {
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+  }
+  #radar {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+  #pieChart {
+    width: 150px;
+  }
+  #nutriments {
+    width: 250px;
+    margin-top: -350px;
+  }
+  #nutriment {
+    margin-left: 20px;
+    width: 200px;
+  }
+}

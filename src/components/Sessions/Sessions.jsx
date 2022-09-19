@@ -54,6 +54,7 @@ function Session({ sessions }) {
   }
   return (
     <LineChart
+      id="lineChart"
       width={400}
       height={300}
       data={sessions}
@@ -64,7 +65,12 @@ function Session({ sessions }) {
         bottom: 5,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" fill="#E60001" stroke="none" />
+      <CartesianGrid
+        strokeDasharray="3 3"
+        fill="#E60001"
+        stroke="none"
+        id="linegrid"
+      />
       <XAxis dataKey="day" tickFormatter={day} />
       <YAxis hide={true} />
       <Line
