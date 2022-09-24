@@ -81,6 +81,9 @@ function Session({ sessions }) {
         activeDot={<Dot />}
       />
       <Tooltip content={CustomTooltip} />
+      <text x="130" y="80" fontSize={16} fill="#FFFFFF" opacity={0.5}>
+        Durée moyenne des sessions
+      </text>
     </LineChart>
   )
 }

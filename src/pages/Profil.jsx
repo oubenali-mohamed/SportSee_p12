@@ -8,6 +8,7 @@ import Score from '../components/Score/Score'
 import { useEffect } from 'react'
 import Services from '../Services'
 import styled from 'styled-components'
+import Loader from '../utils/Loader.jsx'
 
 const StyleHeader = styled.div`
   position: absolute;
@@ -34,6 +35,7 @@ function Profil() {
       userFirstName = data.data.userInfos.firstName
       score = data.data.score * 100
     })
+
     Services.getUserSession(id).then((data) => {
       dataSessions = data.data.sessions
     })
@@ -44,11 +46,22 @@ function Profil() {
       dataActivity = data.data.sessions
     })
   }, [id])
-
+  if (
+    !nutrimentsData &&
+    !userFirstName &&
+    !score &&
+    !dataSessions &&
+    !dataPerformance &&
+    !dataActivity
+  ) {
+    return <Loader />
+  }
   return (
     <div>
       <StyleHeader>
-        <h1>Bonjour {userFirstName}</h1>
+        <h1>
+          Bonjour <span className="userName">{userFirstName}</span>
+        </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </StyleHeader>
       <div id="radarSessionScore">
