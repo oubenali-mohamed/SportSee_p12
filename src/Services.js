@@ -12,6 +12,7 @@ const Services = {
         return response.json()
       })
       .then((data) => {
+        console.log(data)
         return data
       })
   },
